@@ -1,0 +1,725 @@
+* {
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    font-family: "Montserrat", "sans-serif";
+    overflow-x: hidden;
+    color: rgb(102, 102, 102);
+}
+
+.sinpadding [class*="col-"] {
+    padding: 0;
+}
+
+.separador-gris {
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------------------------- index ---------------------------------------------------------------------- */
+/* ---------- menu ---------- */
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    width: 100%;
+    align-content: center;
+}
+
+@media only screen and (max-width: 800px){
+    .menu {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+/* ---------- menu ---------- */
+/* ---------- logo ---------- */
+
+.logo{
+    width: 360px;
+    height: 193px;
+    background-image: url("images/logo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 15px 0;
+    justify-self: center;
+}
+
+.logo p{
+    margin-top: 59px;
+    font-size: 23px;
+    font-weight: bold;
+    color : black!important;
+}
+
+/* ---------- logo ---------- */
+/* ---------- pestañas ---------- */
+
+.pestañas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 0 10px !important;
+}
+
+.boton {
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.boton.active {
+    background-color: rgb(240, 240, 240) !important;
+    border: 3px solid rgb(38, 123, 172) !important;
+    border-bottom: none !important;
+    background-color: grey;
+}
+
+@media only screen and (max-width: 800px) {
+    .pestañas {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        padding: 10px !important;
+    }
+    .boton {
+        border-radius: 10px;
+    }
+    .boton.active {
+        border: 3px solid rgb(38, 123, 172) !important;
+    }
+}
+
+/* ---------- pestañas ---------- */
+/* ---------- cajas ---------- */
+
+.caja-mayor{
+    grid-column: 2 / 3;
+    grid-row: 1 / span 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 2px) 1fr;
+    text-align: center;
+}
+
+.caja-mayor .titulo {
+    font-weight: bold;
+    font-size: 15px;
+    color:black;
+    margin-top: -30px;
+}
+
+.caja{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% auto auto;
+}
+
+.disp, .no-disp, .tel, .ubi {
+    width: 60px;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-self: center;
+    
+}
+
+.no-disp{
+    background-image: url("images/avatar.png");
+    background-size: 75%;
+}
+
+.disp{
+    background-image: url("images/avatar2.png");
+    background-size: 75%;
+}
+
+.ubi{
+    background-image: url("images/placeholder.png");
+    background-size: 75%;
+}
+
+.tel{
+    background-image: url("images/phone-call.png");
+    background-size: 65%;
+}
+
+@media only screen and (max-width: 800px) {
+    .caja-mayor {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, auto 2px) 1fr;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .icono{
+        grid-row: span 3;
+    }
+    .caja {
+        grid-template-columns: 25% 75%;
+        grid-template-rows: repeat(3, auto);
+    }
+    .disp, .no-disp, .ubi {
+        background-size: 45%;
+        max-width: 100px;
+    }
+    .tel {
+        background-size: 45%;
+        max-width: 100px;
+    }
+}
+
+/* ---------- cajas ---------- */
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: inline-block;
+}
+
+.icono1, .icono2, .icono3, .icono4, .icono5 {
+    height: 120px;
+    background-size: 67%;
+    width: 175px;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-self: center;
+}
+
+.icono1{    
+    background-image: url("images/financiera.png");
+}
+
+.icono2{        
+    background-image: url("images/familia.png");
+}
+
+.icono3{
+    background-image: url("images/susecion.png");
+}
+
+.icono4{
+    background-image: url("images/accidente.png");
+}
+
+.icono5{       
+    background-image: url("images/veredicto.png");
+}
+
+@media only screen and (max-width: 800px) {
+    .icono1, .icono2, .icono3, .icono4, .icono5 {
+        background-size: 35%;
+        width: 310px;
+        justify-self: center;
+    }
+}
+
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    width: 100%;
+    column-gap: 20px;
+    padding: 20px !important;
+    text-align: center;
+}
+
+.nosotros .florero {
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+}
+
+.nosotros .separador-gris {
+    display: none;
+}
+
+.nosotros .h3:nth-child(1) {
+    grid-column: 1 / 2;
+}
+
+.nosotros .h3:nth-child(1) {
+    grid-column: 3 / 4;
+}
+
+.nosotros h3{
+    grid-row: 2 / 3;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    .nosotros {
+        grid-template-columns: 100%;
+        grid-template-rows: auto 2px auto;
+    }
+    .nosotros h3{
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .nosotros .separador-gris {
+        display: block;
+    }
+    .nosotros .florero {
+        display: none;
+    }
+}
+
+.florero{
+    box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.2), 2px 6px 2px 0 rgba(0, 0, 0, 0.19);
+    width: 300px;
+    height: 500px;
+    background-image: url("images/florero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 3px;
+}
+
+/* ---------- animaciones ---------- */
+
+.salir-izq, .salir-der {
+    transition: 1s ease-in-out;
+    z-index: 2;
+}
+
+.salir-der {
+    transform: translateX(100%);
+}
+
+.salir-izq {
+    transform: translateX(-100%);
+}
+
+.entrar {
+    transform: translateX(0);
+}
+
+#inicio, #contacto {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+}
+
+
+
+.ocultar {
+    display: none;
+}
+
+.contenido {
+    display: relative;
+}
+/* ---------------------------------------------------------------------- index ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- inicio ---------------------------------------------------------------------- */
+.imagen1, .imagen2, .imagen3 {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 700px;
+    width: 100%;
+}
+
+.imagen1 {    
+    background: url("images/justicia.jpg");
+}
+
+@media only screen and (min-width: 1200px) {
+    .imagen1 {
+        background-position-y: -85px !important;
+    }
+    
+}
+
+.imagen1 .texto, .imagen3 .texto {
+    position: absolute;
+    color: white;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+}
+
+.imagen1 .texto {
+    top: 35%;
+    left: 50%;
+    width: 100%;
+}
+
+.imagen3 .texto {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+}
+
+.carousel-item .fondo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+}
+
+.imagen2 {
+    background-image: url("images/juntas.jpg");
+}
+
+.imagen3 {
+    background: url("images/wall.jpg");
+}
+
+.fondo1{
+    background-image: url("images/fondo1.jpg");    
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ---------- boton 1 ---------- */
+
+.boton1 {
+    text-align: center;
+    padding: 25px;
+}
+
+.boton1 ul {
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+}
+
+.boton1 .texto {
+    list-style-type: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+.boton1 .titulo {
+    font-weight: bolder;
+    font-size: 40px;
+    color: rgb(41, 41, 41);
+}
+
+.punto-celeste {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(78, 175, 255);
+    overflow-y: hidden;
+    bottom: 0;
+}
+
+/* ---------- boton 1 ---------- */
+/* ---------- boton 2 ---------- */
+
+.botones2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr 2px) 1fr;
+    grid-template-rows: auto;
+}
+
+.boton2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    transition: .5s ease;
+    align-content: center;
+}
+
+.boton2 .titulo {
+    padding: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: black;
+}
+
+.boton2:hover{
+   border-radius: 5px;
+   background: rgb(240, 240, 240);
+}
+
+@media only screen and (max-width: 800px) {
+    .botones2 {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+    }
+    .imagen1 .texto {
+        margin-top:15%;
+        font-size: 55px;
+    }
+    .imagen3 .texto{
+        font-size: 55px;
+    }
+
+}
+
+/* ---------- boton 2 ---------- */
+/* ---------- cabecera-info-extra ---------- */
+
+.cabecera-info-extra {
+    background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6) ), url("images/maquina.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y:100%;
+    height: 250px;
+    position: relative;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.cabecera-info-extra hr {
+    background-color: white;
+    width: 100px;
+    height: 2px;
+}
+
+/* ---------- cabecera-info-extra ---------- */
+/* ---------- info-extra ---------- */
+
+.info-extra {
+    text-align: center;
+}
+
+.info-extra .texto {
+    min-width: 50%;
+    max-width: 800px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ---------- info-extra ---------- */
+/* ---------- cartas ---------- */
+
+.contenedor-cartas {
+    background: linear-gradient(white, rgb(211, 211, 211));
+    display: grid;
+    grid-template-columns: 3fr auto 2px auto 3fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding: 20px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contenedor-cartas .separador-gris {
+    background-color: rgb(202, 202, 202);
+}
+
+.foto1, .info1 {
+    text-align: right;
+    color: black;
+    border-radius: 5px;
+}
+
+.foto2, .info2 {
+    text-align: left;
+    color: black;
+    border-radius: 5px;
+}
+.foto2 .foto {
+    margin-bottom: 1%;
+    width: 300px;
+    max-width: 400px;
+    height: 300px;
+    background-image: url("images/juntas.jpg");
+    background-position-x: 84%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-size:170%;    
+    border-radius: 3px;
+    box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.2), 2px 6px 2px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.foto1 .foto {
+    margin-bottom: 1%;
+    width: 300px;
+    max-width: 400px;
+    height: 300px;
+    background-image: url("images/mama.jpg");
+    background-position-x: 14%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size:cover;    
+    border-radius: 3px;
+    box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.2), 2px 6px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 800px) {
+    .contenedor-cartas {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 2px auto auto;
+    }
+    .info1, .info2, .foto1, .foto2 {
+        text-align: center;
+    }
+    .foto1 {
+        grid-row: 1 / 2;
+    }
+    .info1 {
+        grid-row: 2 / 3 ;
+    }
+}
+
+/* ---------- cartas ---------- */
+/* ---------- footer ---------- */
+
+.footer {
+    background: linear-gradient(rgb(161, 63, 63), rgb(163, 52, 52));
+    display: grid;
+    grid-template-columns: auto 2px auto 2px auto;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 10px;
+    padding: 10px !important;
+}
+
+.footer * {
+    color: white;
+    grid-row: span 2;
+}
+
+.footer .contenedor-redes {
+    grid-row: auto;
+}
+
+.contenedor-redes {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.raya:hover{
+color: #B62B24;
+}
+
+/* ---------- footer ---------- */
+/* ---------------------------------------------------------------------- inicio ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- contacto ---------------------------------------------------------------------- */
+
+.contacto h1{
+    padding-top: 100px;
+}
+
+.mapa{
+    border-top: 2px inset black;
+}
+
+/* ---------- formulario ---------- */
+
+/*.separador-gris {
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+}*/
+
+.contenedor-contacto {
+    display: grid;
+    grid-template-columns: auto 2px 80% 2px auto;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px !important;
+}
+
+.contenedor-contacto .separador-gris:nth-child(1) {
+    grid-column: 2 / 3;
+}
+
+.contenedor-formulario {
+    text-align: center;
+    grid-column: 3 / 4;
+}
+
+.contenedor-formulario > input {
+    margin-top: 20px;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 800px){
+    .contenedor-contacto {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    .formulario {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+    .contenedor-formulario {
+        grid-column: auto;
+    }
+}
+
+.contenedor-formulario input {
+    padding: 10px;
+    min-width: 300px;
+}
+
+.form-control{
+    background-color: #f0ebeb !important;
+}
+
+/* ---------- formulario ---------- */
+/* ---------- caja informacion contacto ---------- */
+
+.info-contacto {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.info-contacto div {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.info-contacto .titulo {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.titulo-contacto {
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+/* ---------- caja informacion contacto ---------- */
+/* ---------- cabecera-contacto ---------- */
+
+.cabecera-contacto {
+    background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6) ), url("images/wall2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.cabecera-contacto hr {
+    background-color: white;
+    width: 100px;
+    height: 2px;
+}
+
+/* ---------- cabecera-contacto ---------- */
+/* ---------------------------------------------------------------------- contacto ---------------------------------------------------------------------- */
