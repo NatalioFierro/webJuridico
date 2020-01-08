@@ -1,0 +1,163 @@
+.imagen1, .imagen2, .imagen3 {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+.imagen1 {
+    background-image: url("../../images/codigo.png");
+}
+
+.imagen2 {
+    background-image: url("../../images/cofe.jpg");
+}
+
+.imagen3 {
+    background-image: url("../../images/laptop.jpg");
+}
+
+/* ---------- boton 1 ---------- */
+
+.boton1 {
+    text-align: center;
+    padding: 25px;
+}
+
+.boton1 ul {
+    display: inline-block;
+    margin: auto;
+    text-align: left;
+}
+
+.boton1 .texto {
+    list-style-type: disc;
+    font-size: 30px;
+}
+
+.boton1 .titulo {
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.punto-celeste {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(78, 175, 255);
+    overflow-y: hidden;
+    bottom: 0;
+}
+
+/* ---------- boton 1 ---------- */
+/* ---------- boton 2 ---------- */
+
+.botones2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr 2px) 1fr;
+    grid-template-rows: auto;
+}
+
+.boton2 div {
+    text-align: center;
+    padding: 10px;
+}
+
+.boton2 .titulo {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .botones2 {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+    }
+}
+
+/* ---------- boton 2 ---------- */
+/* ---------- cabecera-info-extra ---------- */
+
+.cabecera-info-extra {
+    background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6) ), url("../images/edificios.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 250px;
+    position: relative;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.cabecera-info-extra hr {
+    background-color: white;
+    width: 100px;
+    height: 2px;
+}
+
+/* ---------- cabecera-info-extra ---------- */
+/* ---------- info-extra ---------- */
+
+.info-extra {
+    text-align: center;
+}
+
+.info-extra .texto {
+    min-width: 50%;
+    max-width: 800px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ---------- info-extra ---------- */
+/* ---------- cartas ---------- */
+
+.separador-gris {
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+}
+
+.contenedor-cartas {
+    display: grid;
+    grid-template-columns: 3fr 1fr 2px 1fr 3fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding: 20px !important;
+}
+
+.foto1, .info1 {
+    text-align: right;
+}
+
+.foto2, .info2 {
+    text-align: left;
+}
+
+.foto1 .foto, .foto2 .foto {
+    width: 200px;
+    max-width: 300px;
+    height: 200px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    .contenedor-cartas {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 3fr 2px 1fr 3fr;
+    }
+    .info1, .info2, .foto1, .foto2 {
+        text-align: center;
+    }
+    .foto1 {
+        grid-row: 1 / 2;
+    }
+    .info1 {
+        grid-row: 2 / 3 ;
+    }
+}
+
+/* ---------- cartas ---------- */

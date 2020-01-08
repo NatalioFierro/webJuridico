@@ -1,0 +1,137 @@
+.sinpadding [class*="col-"] {
+    padding: 0;
+}
+
+
+body{
+    color: red;
+}
+
+.caja{
+    float: right;
+    margin-right: 100px;
+}
+
+.w-100{
+    height: 500px;
+}
+
+.contacto{
+    background-image: url("../images/edificios.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 250px;
+    position: relative;
+    color: white;
+}
+
+.contacto h1{
+    padding-top: 100px;
+}
+
+.mapa{
+    border-top: 2px inset black;
+}
+
+/* ---------- formulario ---------- */
+
+.separador-gris {
+    background-color: rgb(233, 233, 233);
+    border-radius: 50%;
+}
+
+.contenedor-contacto {
+    display: grid;
+    grid-template-columns: 2fr 2px 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px !important;
+}
+
+.contenedor-formulario {
+    text-align: center;
+}
+
+.contenedor-formulario > input {
+    margin-top: 20px;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 767px){
+    .contenedor-contacto {
+        grid-template-columns: 100%;
+        grid-template-rows: auto 2px auto;
+    }
+    .formulario {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+}
+
+.contenedor-formulario input {
+    padding: 10px;
+    min-width: 300px;
+}
+
+.form-control{
+    background-color: #f0ebeb !important;
+}
+
+/* ---------- formulario ---------- */
+/* ---------- caja informacion contacto ---------- */
+
+.info-contacto {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.info-contacto div {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.titulo {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.titulo-contacto {
+    font-weight: bolder;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+/* ---------- caja informacion contacto ---------- */
+/* ---------- cabecera-contacto ---------- */
+
+.cabecera-contacto {
+    background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0.6) ), url("../images/edificios.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 250px;
+    position: relative;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.cabecera-contacto hr {
+    background-color: white;
+    width: 100px;
+    height: 2px;
+}
+
+/* ---------- cabecera-contacto ---------- */
